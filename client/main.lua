@@ -147,15 +147,7 @@ CreateThread(function()
 					if IsPedInAnyVehicle(playerPed, false) then
 						if (GetPedInVehicleSeat(playerCar, -1) == playerPed) then					
 							if hasBeenCaught == false then
-								if GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "POLICE" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "POLICE2" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "POLICE3" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "POLICE4" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "POLICEB" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "POLICET" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "FIRETRUK" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "AMBULAN" then -- BLACKLISTED VEHICLE
-								-- VEHICLES ABOVE ARE BLACKLISTED
+								if GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == Config.PoliceVehicle then -- BLACKLISTED VEHICLE
 								else
 									-- ALERT POLICE (START)
 									if alertPolice == true then
@@ -230,15 +222,7 @@ CreateThread(function()
 					if IsPedInAnyVehicle(playerPed, false) then
 						if (GetPedInVehicleSeat(playerCar, -1) == playerPed) then 
 							if hasBeenCaught == false then
-								if GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "POLICE" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "POLICE2" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "POLICE3" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "POLICE4" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "POLICEB" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "POLICET" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "FIRETRUK" then -- BLACKLISTED VEHICLE
-								elseif GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == "AMBULAN" then -- BLACKLISTED VEHICLE
-								-- VEHICLES ABOVE ARE BLACKLISTED
+								if GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == Config.PoliceVehicle then -- BLACKLISTED VEHICLE
 								else
 									-- ALERT POLICE (START)
 									if alertPolice == true then
