@@ -8,6 +8,8 @@ Config.Speedcamera80Zone = {}
 
 Config.Speedcamera120Zone = {}
 
+Config.Blips = {}
+
 -- BELOVE IS YOUR SETTINGS, CHANGE THEM TO WHATEVER YOU'D LIKE & MORE SETTINGS WILL COME IN THE FUTURE! --
 local useBilling = true -- OPTIONS: (true/false)
 local useCameraSound = true -- OPTIONS: (true/false)
