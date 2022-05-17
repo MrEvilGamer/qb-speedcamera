@@ -26,7 +26,3 @@ RegisterServerEvent('qb-speedcamera:closeGUI', function()
 	TriggerClientEvent('qb-speedcamera:closeGUI', source)
 end)
 -- FLASHING EFFECT (END)
-
-function notification(text, source)
-	TriggerClientEvent('esx:showNotification', text)
-end
