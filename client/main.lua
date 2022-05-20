@@ -1,6 +1,4 @@
 QBCore = exports['qb-core']:GetCoreObject()
-
-Config = {}
 -- BELOVE IS YOUR SETTINGS, CHANGE THEM TO WHATEVER YOU'D LIKE & MORE SETTINGS WILL COME IN THE FUTURE! --
 local useBilling = true -- OPTIONS: (true/false)
 local useCameraSound = true -- OPTIONS: (true/false)
@@ -96,8 +94,8 @@ CreateThread(function()
 					if IsPedInAnyVehicle(playerPed, false) then
 						if (GetPedInVehicleSeat(playerCar, -1) == playerPed) then
 							if hasBeenCaught == false then
-								if GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == Config.ExemptVehicle then -- BLACKLISTED VEHICLE
-								-- VEHICLES ABOVE ARE BLACKLISTED
+								QBCore.Functions.GetPlayerData(function(PlayerData)
+									if PlayerData.job.name == "police" then
 								else
 									-- ALERT POLICE (START)
 									if alertPolice == true then
@@ -147,6 +145,7 @@ CreateThread(function()
 									hasBeenCaught = true
 									Wait(5000) -- This is here to make sure the player won't get fined over and over again by the same camera!
 								end
+							    end)
 							end
 						end
 					end
@@ -172,7 +171,8 @@ CreateThread(function()
 					if IsPedInAnyVehicle(playerPed, false) then
 						if (GetPedInVehicleSeat(playerCar, -1) == playerPed) then					
 							if hasBeenCaught == false then
-								if GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == Config.ExemptVehicle then -- BLACKLISTED VEHICLE
+							    QBCore.Functions.GetPlayerData(function(PlayerData)
+								if PlayerData.job.name == "police" then
 								else
 									-- ALERT POLICE (START)
 									if alertPolice == true then
@@ -222,6 +222,7 @@ CreateThread(function()
 									hasBeenCaught = true
 									Wait(5000) -- This is here to make sure the player won't get fined over and over again by the same camera!
 								end
+							     end)
 							end
 						end
 					end
@@ -247,7 +248,8 @@ CreateThread(function()
 					if IsPedInAnyVehicle(playerPed, false) then
 						if (GetPedInVehicleSeat(playerCar, -1) == playerPed) then 
 							if hasBeenCaught == false then
-								if GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == Config.ExemptVehicle then -- BLACKLISTED VEHICLE
+								QBCore.Functions.GetPlayerData(function(PlayerData)
+									if PlayerData.job.name == "police" then
 								else
 									-- ALERT POLICE (START)
 									if alertPolice == true then
@@ -298,6 +300,7 @@ CreateThread(function()
 									hasBeenCaught = true
 									Wait(5000) -- This is here to make sure the player won't get fined over and over again by the same camera!
 								end
+							    end)
 							end
 						end
 					end
