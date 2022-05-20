@@ -96,7 +96,7 @@ CreateThread(function()
 					if IsPedInAnyVehicle(playerPed, false) then
 						if (GetPedInVehicleSeat(playerCar, -1) == playerPed) then
 							if hasBeenCaught == false then
-								if GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == Config.PoliceVehicle then -- BLACKLISTED VEHICLE
+								if GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == Config.ExemptVehicle then -- BLACKLISTED VEHICLE
 								-- VEHICLES ABOVE ARE BLACKLISTED
 								else
 									-- ALERT POLICE (START)
@@ -105,8 +105,8 @@ CreateThread(function()
 											local x,y,z = table.unpack(GetEntityCoords(PlayerPedId(), false))
 											TriggerServerEvent('qb-phone:server:sendNewMail', {
 												sender = "911/Police",
-												subject = "Over Speeding",
-												message = 'Someone passed the speed camera, above ' .. alertSpeed.. ' KMH',
+												subject = "Speeding Fine",
+												message = 'Your vehicle was caught speeding and has been fined. Your vehicle was driving above the speed limit of ' .. alertSpeed.. ' km/h',
 											})
 										end
 									end
@@ -126,7 +126,7 @@ CreateThread(function()
 										TriggerServerEvent('qb-speedcamera:closeGUI')
 									end
 									-- FLASHING EFFECT (END)								
-									QBCore.Functions.Notify("You've been fined by the speedcamera in a 60 zone! Your speed: " .. math.floor(SpeedKM) .. " KM/H", 'primary', 7500)
+									QBCore.Functions.Notify("Speeding fine (60 km/h zone) - Your speed: " .. math.floor(SpeedKM) .. " km/h", 'primary', 7500)
 									
 									if useBilling == true then
 										if SpeedKM >= maxSpeed + 30 then
@@ -172,7 +172,7 @@ CreateThread(function()
 					if IsPedInAnyVehicle(playerPed, false) then
 						if (GetPedInVehicleSeat(playerCar, -1) == playerPed) then					
 							if hasBeenCaught == false then
-								if GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == Config.PoliceVehicle then -- BLACKLISTED VEHICLE
+								if GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == Config.ExemptVehicle then -- BLACKLISTED VEHICLE
 								else
 									-- ALERT POLICE (START)
 									if alertPolice == true then
@@ -180,8 +180,8 @@ CreateThread(function()
 											local x,y,z = table.unpack(GetEntityCoords(PlayerPedId(), false))
 											TriggerServerEvent('qb-phone:server:sendNewMail', {
 												sender = "911/Police",
-												subject = "Over Speeding",
-												message = 'Someone passed the speed camera, above ' .. alertSpeed.. ' KMH',
+												subject = "Speeding Fine",
+												message = 'Your vehicle was caught speeding and has been fined. Your vehicle was driving above the speed limit of ' .. alertSpeed.. ' km/h',
 											})
 										end
 									end
@@ -201,7 +201,7 @@ CreateThread(function()
 										TriggerServerEvent('qb-speedcamera:closeGUI')
 									end
 									-- FLASHING EFFECT (END)								
-									QBCore.Functions.Notify("You've been fined by the speedcamera in a 80 zone! Your speed: " .. math.floor(SpeedKM) .. " KM/H", 'error', 7500)
+									QBCore.Functions.Notify("Speeding fine (80 km/h zone) - Your speed: " .. math.floor(SpeedKM) .. " km/h", 'primary', 7500)
 									
 									if useBilling == true then
 										if SpeedKM >= maxSpeed + 30 then
@@ -247,7 +247,7 @@ CreateThread(function()
 					if IsPedInAnyVehicle(playerPed, false) then
 						if (GetPedInVehicleSeat(playerCar, -1) == playerPed) then 
 							if hasBeenCaught == false then
-								if GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == Config.PoliceVehicle then -- BLACKLISTED VEHICLE
+								if GetDisplayNameFromVehicleModel(GetEntityModel(veh)) == Config.ExemptVehicle then -- BLACKLISTED VEHICLE
 								else
 									-- ALERT POLICE (START)
 									if alertPolice == true then
@@ -255,8 +255,8 @@ CreateThread(function()
 											local x,y,z = table.unpack(GetEntityCoords(PlayerPedId(), false))
 											TriggerServerEvent('qb-phone:server:sendNewMail', {
 												sender = "911/Police",
-												subject = "Over Speeding",
-												message = 'Someone passed the speed camera, above ' .. alertSpeed.. ' KMH',
+												subject = "Speeding Fine",
+												message = 'Your vehicle was caught speeding and has been fined. Your vehicle was driving above the speed limit of ' .. alertSpeed.. ' km/h',
 											})
 										end
 									end
@@ -276,7 +276,7 @@ CreateThread(function()
 										TriggerServerEvent('qb-speedcamera:closeGUI')
 									end
 									-- FLASHING EFFECT (END)
-									QBCore.Functions.Notify("You've been fined by the speedcamera in a 120 zone! Your speed: " .. math.floor(SpeedKM) .. " KM/H", 'error', 7500)
+									QBCore.Functions.Notify("Speeding fine (120 km/h zone) - Your speed: " .. math.floor(SpeedKM) .. " km/h", 'primary', 7500)
 									
 									
 									if useBilling == true then
